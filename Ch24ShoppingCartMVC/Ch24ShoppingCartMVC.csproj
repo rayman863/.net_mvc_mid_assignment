@@ -163,7 +163,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <EntityDeploy Include="App_Data\Halloween.mdf" />
+    <Content Include="App_Data\Halloween.mdf" />
     <Content Include="App_Data\Halloween_log.ldf">
       <DependentUpon>Halloween.mdf</DependentUpon>
     </Content>
