@@ -15,11 +15,12 @@ namespace Ch24ShoppingCartMVC.Controllers {
             return View();
         }
         [HttpGet]
-        public ViewResult Contact() {
+        public ViewResult Contact()
+        {
             //CREATE A ContactViewModel OBJECT call model  model
-            ____________________________________________________
+            ContactViewModel model = new ContactViewModel();
             //Pass model to View
-            _________________________________
+            return View(model);
         }
     }
 }
