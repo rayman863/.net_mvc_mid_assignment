@@ -177,3 +177,4 @@ C:\Users\rayma\OneDrive\AIUB\ATP .NET\Lab Assignment-Mid\Lab Assignment-Mid\Shop
 C:\Users\rayma\OneDrive\AIUB\ATP .NET\Lab Assignment-Mid\Lab Assignment-Mid\ShoppingCartMVC\Ch24ShoppingCartMVC\bin\System.Web.WebPages.Razor.xml
 C:\Users\rayma\OneDrive\AIUB\ATP .NET\Lab Assignment-Mid\Lab Assignment-Mid\ShoppingCartMVC\Ch24ShoppingCartMVC\obj\Debug\Ch24ShoppingCartMVC.csproj.CopyComplete
 C:\Users\rayma\OneDrive\AIUB\ATP .NET\Lab Assignment-Mid\Lab Assignment-Mid\ShoppingCartMVC\Ch24ShoppingCartMVC\obj\Debug\Ch24ShoppingCartMVC.pdb
+C:\Users\rayma\OneDrive\AIUB\ATP .NET\Lab Assignment-Mid\Lab Assignment-Mid\ShoppingCartMVC\Ch24ShoppingCartMVC\obj\Debug\Ch24ShoppingCartMVC.csprojAssemblyReference.cache

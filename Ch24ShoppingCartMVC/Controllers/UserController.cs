@@ -29,8 +29,8 @@ namespace Ch24ShoppingCartMVC.Controllers
                     data.SaveChanges();
                 }
             }
-            
-            return View(user);
+
+            return RedirectToAction("Login", "User");
         }
 
         //Login Get

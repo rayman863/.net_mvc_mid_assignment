@@ -15,7 +15,7 @@ namespace Ch24ShoppingCartMVC.Controllers
         public ActionResult Index(string id)
         {
 
-            //get list for drop down from temp data called products 
+            //get list for drop down from temp data called products
             SelectList products = (SelectList)TempData["products"];
             if (products == null)
             {
@@ -52,6 +52,7 @@ namespace Ch24ShoppingCartMVC.Controllers
             
         }
         [HttpPost] //post back - get selected ddl value and refresh
+        [ValidateAntiForgeryToken]
         public RedirectToRouteResult Index(FormCollection collection)
         {
 
