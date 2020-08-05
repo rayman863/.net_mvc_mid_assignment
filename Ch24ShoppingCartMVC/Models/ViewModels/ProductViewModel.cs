@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.ComponentModel.DataAnnotations;
+
 
 namespace Ch24ShoppingCartMVC.Models {
     public class ProductViewModel
@@ -13,6 +15,7 @@ namespace Ch24ShoppingCartMVC.Models {
         public string LongDescription { get; set; } 
         public decimal UnitPrice { get; set; }
         public string ImageFile { get; set; }
+        [Range(0, int.MaxValue, ErrorMessage = "Quantity must be a positive number")]
         public int Quantity { get; set; }
 
         //display item's property values

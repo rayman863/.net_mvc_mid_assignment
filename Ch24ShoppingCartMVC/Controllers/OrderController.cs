@@ -14,6 +14,7 @@ namespace Ch24ShoppingCartMVC.Controllers
         [HttpGet]
         public ActionResult Index(string id)
         {
+
             //get list for drop down from temp data called products 
             SelectList products = (SelectList)TempData["products"];
             if (products == null)
@@ -33,23 +34,31 @@ namespace Ch24ShoppingCartMVC.Controllers
                 return RedirectToAction("Index", new { id = id });
             }
             else
-            { //get selected product and return in view method
-                //Call the method GetOrderInfo to get an OrderViewModel object called model
-                var model = order.GetOrderInfo(id);
-                //Assign products to ProductsList property of model
-                model.ProductsList = products;
-                //Assign the quantity of the SelectProduct of the model to 1
-                model.SelectedProduct.Quantity = 1;
-                //Send the model object to the view.
-                return View(model);
+            {
+                if ((string)Session["user"] != null)
+                {
+                    //get selected product and return in view method
+                    //Call the method GetOrderInfo to get an OrderViewModel object called model
+                    var model = order.GetOrderInfo(id);
+                    //Assign products to ProductsList property of model
+                    model.ProductsList = products;
+                    //Assign the quantity of the SelectProduct of the model to 1
+                    model.SelectedProduct.Quantity = 1;
+                    //Send the model object to the view.
+                    return View(model);
+                }
+                return RedirectToAction("Login", "User");
             }
+            
         }
         [HttpPost] //post back - get selected ddl value and refresh
         public RedirectToRouteResult Index(FormCollection collection)
         {
-            string pID = collection["ddlProducts"];
-            //Redirect to the action method index of the Order controller with parameter the id assigned to pID
-            return RedirectToAction("Index", new { id = pID });
+
+                string pID = collection["ddlProducts"];
+                //Redirect to the action method index of the Order controller with parameter the id assigned to pID
+                return RedirectToAction("Index", new { id = pID });
+            
         }
     }
 }

@@ -17,9 +17,9 @@ namespace Ch24ShoppingCartMVC.Models
             cart = (List<ProductViewModel>)objCart;
             if (cart == null)
             {   //Create the object cart
-                objCart = new List<ProductViewModel>();
+                HttpContext.Current.Session["cart"] = new List<ProductViewModel>();
                 //Assign cart to the Session object cart
-                cart = (List<ProductViewModel>)objCart;
+                cart = (List<ProductViewModel>)HttpContext.Current.Session["cart"];
             }
             return cart;
         }

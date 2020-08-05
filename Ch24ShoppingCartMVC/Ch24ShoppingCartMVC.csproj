@@ -134,6 +134,7 @@
     <Compile Include="Controllers\CheckoutController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\OrderController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -156,7 +157,12 @@
     <Compile Include="Models\DataAccess\Product.cs">
       <DependentUpon>Halloween.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\DataAccess\User.cs">
+      <DependentUpon>Halloween.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Login.cs" />
     <Compile Include="Models\OrderModel.cs" />
+    <Compile Include="Models\User.cs" />
     <Compile Include="Models\ViewModels\CartViewModel.cs" />
     <Compile Include="Models\ViewModels\ContactViewModel.cs" />
     <Compile Include="Models\ViewModels\OrderViewModel.cs" />
@@ -301,11 +307,13 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Cart\List.cshtml" />
-    <Content Include="Views\Order\Index.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Checkout\Index.cshtml" />
+    <Content Include="Views\Cart\List.cshtml" />
+    <Content Include="Views\Order\Index.cshtml" />
+    <Content Include="Views\User\Registration.cshtml" />
+    <Content Include="Views\User\Login.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
